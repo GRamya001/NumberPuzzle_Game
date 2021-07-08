@@ -45,7 +45,7 @@ class CustomNumberPuzzleControl extends NumberPuzzleControl {
 			}
 		}
 
-		if(idx+1 == emptyCellId || idx-1 == emptyCellId || idx+4 == emptyCellId || idx-4 == emptyCellId) {
+		if((idx+1==emptyCellId && (idx+1)%4!=0) || (idx-1) ==emptyCellId && (idx%4!=0)|| idx+4==emptyCellId || idx-4==emptyCellId) {
 			swapButton(buttons[emptyCellId], buttonClicked);
 			return idx;
 		}
